@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BuildCalc Pro - AI-Powered Construction Estimator. Build professional estimates in 60 seconds. 12 trades, regional pricing, live market data. $39/mo.">
+<meta property="og:title" content="BuildCalc Pro — AI-Powered Construction Estimator">
+<meta property="og:description" content="Build professional construction estimates in 60 seconds. AI-powered, 12 trades, regional pricing. $39/mo.">
+<meta property="og:image" content="https://buildcalcpro.club/hero-image.png">
+<meta property="og:url" content="https://buildcalcpro.club">
+<title>BuildCalc Pro — AI-Powered Construction Estimator | $39/mo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#0a0c12;color:#ffffff;font-family:'DM Mono',monospace;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* NAVBAR */
+.nav{position:sticky;top:0;background:rgba(10,12,18,.92);backdrop-filter:blur(12px);border-bottom:1px solid #1f2937;z-index:100;padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-weight:900;font-size:22px;color:#fff;letter-spacing:-0.5px;text-decoration:none}
+.logo-mark{width:36px;height:36px;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff}
+.logo-pro{background:#f97316;color:#fff;font-size:10px;padding:3px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:700;letter-spacing:1.5px;margin-left:4px}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:#d1d5db;text-decoration:none;font-size:13px;letter-spacing:1px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#f97316}
+.nav-cta{background:#f97316;color:#fff !important;padding:10px 18px;border-radius:6px;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;transition:all .2s}
+.nav-cta:hover{background:#ea580c;transform:translateY(-1px)}
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{padding:80px 0 60px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:1000px;height:600px;background:radial-gradient(ellipse,rgba(249,115,22,.18) 0%,transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);color:#f97316;padding:6px 14px;border-radius:20px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:24px}
+.hero-badge .dot{width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 8px #22c55e}
+.hero h1{font-family:'Syne',sans-serif;font-size:56px;font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;color:#fff}
+.hero h1 .accent{color:#f97316;display:block}
+@media(max-width:768px){.hero h1{font-size:40px}}
+.hero p.sub{font-size:18px;line-height:1.6;color:#d1d5db;margin-bottom:36px;max-width:520px}
+@media(max-width:900px){.hero p.sub{margin-left:auto;margin-right:auto}}
+.hero-cta-group{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+@media(max-width:900px){.hero-cta-group{justify-content:center}}
+.cta-primary{background:#f97316;color:#fff;padding:18px 32px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all .2s;box-shadow:0 10px 30px rgba(249,115,22,.3)}
+.cta-primary:hover{background:#ea580c;transform:translateY(-2px);box-shadow:0 14px 40px rgba(249,115,22,.4)}
+.cta-secondary{color:#d1d5db;padding:18px 24px;text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;border:1px solid #374151;border-radius:8px;transition:all .2s}
+.cta-secondary:hover{border-color:#f97316;color:#fff}
+.hero-image-wrap{position:relative}
+.hero-image-wrap img{width:100%;height:auto;border-radius:12px;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.trust-line{display:flex;gap:24px;margin-top:32px;font-size:11px;color:#9ca3af;letter-spacing:1px;flex-wrap:wrap}
+@media(max-width:900px){.trust-line{justify-content:center}}
+.trust-line span{display:flex;align-items:center;gap:6px}
+.trust-line span::before{content:"✓";color:#22c55e;font-weight:700}
+
+/* SECTIONS */
+.section{padding:80px 0;position:relative}
+.section-label{display:inline-block;color:#f97316;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:14px;font-family:'DM Mono',monospace}
+.section-title{font-family:'Syne',sans-serif;font-size:40px;font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:18px;color:#fff}
+@media(max-width:768px){.section-title{font-size:30px}}
+.section-sub{font-size:16px;color:#d1d5db;max-width:600px;margin-bottom:50px;line-height:1.6}
+.section-center{text-align:center}
+.section-center .section-sub{margin-left:auto;margin-right:auto}
+
+/* FEATURES GRID */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.features{grid-template-columns:1fr}}
+.feature{background:linear-gradient(180deg,#11141c,#0d1018);border:1px solid #1f2937;border-radius:14px;padding:32px;transition:all .3s}
+.feature:hover{border-color:#f97316;transform:translateY(-4px)}
+.feature-icon{width:56px;height:56px;background:linear-gradient(135deg,rgba(249,115,22,.2),rgba(249,115,22,.05));border:1px solid rgba(249,115,22,.3);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
+.feature h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-0.3px}
+.feature p{color:#d1d5db;font-size:14px;line-height:1.65}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:50px;background:linear-gradient(135deg,#11141c,#0d1018);border:1px solid #1f2937;border-radius:18px;margin-bottom:60px}
+@media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr);gap:30px;padding:30px}}
+.stat{text-align:center}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:42px;font-weight:700;color:#f97316;letter-spacing:-1px;line-height:1;margin-bottom:8px}
+.stat-label{font-size:11px;color:#9ca3af;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+
+/* TRADES GRID */
+.trades-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.trades-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.trades-grid{grid-template-columns:repeat(2,1fr)}}
+.trade-card{background:#11141c;border:1px solid #1f2937;padding:24px 14px;border-radius:10px;text-align:center;transition:all .2s}
+.trade-card:hover{border-color:#f97316;transform:translateY(-3px)}
+.trade-emoji{font-size:32px;margin-bottom:10px}
+.trade-name{font-size:13px;font-weight:700;color:#fff;letter-spacing:0.5px}
+
+/* PRICING */
+.pricing-wrap{display:flex;justify-content:center;padding:30px 0}
+.pricing-card{background:linear-gradient(180deg,#11141c,#0a0c12);border:2px solid #f97316;border-radius:20px;padding:50px 40px;max-width:480px;width:100%;position:relative;box-shadow:0 30px 80px rgba(249,115,22,.15)}
+.pricing-popular{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#f97316;color:#fff;padding:6px 20px;border-radius:20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+.pricing-name{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;text-align:center}
+.pricing-tagline{color:#9ca3af;font-size:12px;text-align:center;letter-spacing:1px;text-transform:uppercase;margin-bottom:32px}
+.pricing-price{text-align:center;margin-bottom:32px}
+.pricing-price .amount{font-family:'Space Grotesk',sans-serif;font-size:72px;font-weight:700;color:#fff;letter-spacing:-3px;line-height:1}
+.pricing-price .currency{font-size:32px;color:#9ca3af;vertical-align:top;margin-right:4px;font-weight:600}
+.pricing-price .period{color:#9ca3af;font-size:14px;letter-spacing:1px;margin-top:4px;display:block}
+.pricing-features{list-style:none;margin-bottom:32px}
+.pricing-features li{padding:11px 0;color:#e5e7eb;font-size:14px;display:flex;align-items:start;gap:10px;border-bottom:1px solid #1f2937}
+.pricing-features li:last-child{border-bottom:none}
+.pricing-features li::before{content:"✓";color:#f97316;font-weight:900;font-size:16px;flex-shrink:0}
+.pricing-cta{display:block;background:#f97316;color:#fff;padding:18px;border-radius:10px;text-align:center;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:2px;text-decoration:none;transition:all .2s;box-shadow:0 10px 30px rgba(249,115,22,.3)}
+.pricing-cta:hover{background:#ea580c;transform:translateY(-2px);box-shadow:0 14px 40px rgba(249,115,22,.4)}
+.pricing-trust{text-align:center;color:#9ca3af;font-size:11px;margin-top:14px;letter-spacing:1px}
+
+/* FAQ */
+.faq-grid{display:grid;gap:14px;max-width:800px;margin:0 auto}
+.faq{background:#11141c;border:1px solid #1f2937;border-radius:10px;padding:24px 28px;transition:all .2s}
+.faq:hover{border-color:#374151}
+.faq summary{cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";color:#f97316;font-size:24px;font-weight:300;transition:transform .2s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{color:#d1d5db;margin-top:14px;font-size:14px;line-height:1.65}
+
+/* FOUNDER */
+.founder-card{background:linear-gradient(135deg,#11141c,#0d1018);border:1px solid #1f2937;border-radius:18px;padding:50px;max-width:780px;margin:0 auto;display:flex;gap:30px;align-items:center}
+@media(max-width:768px){.founder-card{flex-direction:column;text-align:center;padding:32px}}
+.founder-avatar{width:90px;height:90px;background:linear-gradient(135deg,#f97316,#ea580c);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:34px;font-weight:900;color:#fff;flex-shrink:0}
+.founder-name{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:4px}
+.founder-title{color:#f97316;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.founder-quote{color:#e5e7eb;font-size:15px;line-height:1.65;font-style:italic}
+
+/* CTA FINAL */
+.cta-final{padding:80px 0;text-align:center;background:linear-gradient(180deg,transparent,rgba(249,115,22,.05))}
+.cta-final h2{font-family:'Syne',sans-serif;font-size:46px;font-weight:900;letter-spacing:-1.5px;color:#fff;margin-bottom:18px;line-height:1.1}
+@media(max-width:768px){.cta-final h2{font-size:32px}}
+.cta-final p{color:#d1d5db;font-size:17px;margin-bottom:36px}
+
+/* FOOTER */
+.footer{padding:50px 0 30px;border-top:1px solid #1f2937;color:#9ca3af;font-size:13px}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:#9ca3af;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:#f97316}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-mark">B</div>
+      BUILDCALC<span class="logo-pro">PRO</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#trades">Trades</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" class="nav-cta">Get Started</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          AI-POWERED · LIVE MARKET DATA
+        </div>
+        <h1>Build Pro Estimates In <span class="accent">60 Seconds.</span></h1>
+        <p class="sub">Stop losing jobs to slow quotes. BuildCalc Pro generates professional construction estimates with AI-verified market prices for 12 trades, regional adjustments, and instant PDF proposals.</p>
+        <div class="hero-cta-group">
+          <a href="https://buy.stripe.com/14A14n0I9ceZb8Q2zacMM03" class="cta-primary">Get Started — $39/mo →</a>
+          <a href="#features" class="cta-secondary">See Features</a>
+        </div>
+        <div class="trust-line">
+          <span>No credit card games</span>
+          <span>Cancel anytime</span>
+          <span>SSL secured</span>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="hero-image.png" alt="BuildCalc Pro dashboard showing construction estimate of $16,439 with project overview, trade breakdown, and recent estimates">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-center" style="text-align:center;margin-bottom:50px">
+      <div class="section-label">Built for Contractors</div>
+      <h2 class="section-title">Win More Jobs.<br>Quote With Confidence.</h2>
+      <p class="section-sub">Every feature designed to help you close deals faster and avoid pricing mistakes.</p>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🤖</div>
+        <h3>AI Live Market Check</h3>
+        <p>Claude AI searches the web in real-time to verify your pricing against current 2026 market rates. Never underbid or overbid again.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📍</div>
+        <h3>Regional Pricing</h3>
+        <p>Built-in multipliers for 8 USA regions. Northeast labor is 35% higher than Midwest — BuildCalc Pro knows that automatically.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📄</div>
+        <h3>Pro PDF Proposals</h3>
+        <p>Branded, client-ready PDF estimates in one click. Itemized breakdown, regional notes, and your contact info. Looks like $5K software.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>12 Specialized Trades</h3>
+        <p>Roofing, framing, plumbing, electrical, HVAC, drywall, and more. Each with 9-12 detailed specs covering real-world variables.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Profit Margin Control</h3>
+        <p>Set your profit % per job (15%, 25%, 35%) and BuildCalc applies it automatically. See base cost + margin + total instantly.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔧</div>
+        <h3>Real Materials, Real Brands</h3>
+        <p>Azek PVC trim, Boral composite, KraftMaid cabinets, SW Emerald paint. Specs use brands contractors actually quote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="trades">
+  <div class="container">
+    <div class="section-center" style="text-align:center;margin-bottom:50px">
+      <div class="section-label">12 Professional Trades</div>
+      <h2 class="section-title">From Foundation To Finish.</h2>
+      <p class="section-sub">Each trade has 9-12 detailed specs based on real contractor experience. No generic "$/sqft" guesswork.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Trades</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">120+</div>
+        <div class="stat-label">Spec Fields</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">8</div>
+        <div class="stat-label">USA Regions</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">60s</div>
+        <div class="stat-label">Per Estimate</div>
+      </div>
+    </div>
+
+    <div class="trades-grid">
+      <div class="trade-card"><div class="trade-emoji">🏠</div><div class="trade-name">Roofing</div></div>
+      <div class="trade-card"><div class="trade-emoji">🪵</div><div class="trade-name">Flooring</div></div>
+      <div class="trade-card"><div class="trade-emoji">🧱</div><div class="trade-name">Drywall</div></div>
+      <div class="trade-card"><div class="trade-emoji">🎨</div><div class="trade-name">Painting</div></div>
+      <div class="trade-card"><div class="trade-emoji">🏗️</div><div class="trade-name">Concrete</div></div>
+      <div class="trade-card"><div class="trade-emoji">🪚</div><div class="trade-name">Framing</div></div>
+      <div class="trade-card"><div class="trade-emoji">🔧</div><div class="trade-name">Plumbing</div></div>
+      <div class="trade-card"><div class="trade-emoji">⚡</div><div class="trade-name">Electrical</div></div>
+      <div class="trade-card"><div class="trade-emoji">❄️</div><div class="trade-name">HVAC</div></div>
+      <div class="trade-card"><div class="trade-emoji">🏡</div><div class="trade-name">Siding</div></div>
+      <div class="trade-card"><div class="trade-emoji">🪟</div><div class="trade-name">Trim</div></div>
+      <div class="trade-card"><div class="trade-emoji">🗄️</div><div class="trade-name">Cabinets</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-center" style="text-align:center;margin-bottom:30px">
+      <div class="section-label">Simple Pricing</div>
+      <h2 class="section-title">One Plan. All Features.</h2>
+      <p class="section-sub">No tiers, no surprises. Everything BuildCalc Pro offers for one fair monthly price.</p>
+    </div>
+
+    <div class="pricing-wrap">
+      <div class="pricing-card">
+        <div class="pricing-popular">⭐ MOST POPULAR</div>
+        <div class="pricing-name">BuildCalc Pro</div>
+        <div class="pricing-tagline">Everything you need</div>
+        <div class="pricing-price">
+          <div><span class="currency">$</span><span class="amount">39</span></div>
+          <span class="period">per month · billed monthly</span>
+        </div>
+        <ul class="pricing-features">
+          <li>All 12 professional trades</li>
+          <li>AI Live Market Check (web search)</li>
+          <li>Regional pricing for 8 USA regions</li>
+          <li>Unlimited estimates per month</li>
+          <li>PDF proposal generator</li>
+          <li>Save & manage past estimates</li>
+          <li>Profit margin control</li>
+          <li>Real material brand specs</li>
+          <li>Cancel anytime — no contracts</li>
+        </ul>
+        <a href="https://buy.stripe.com/14A14n0I9ceZb8Q2zacMM03" class="pricing-cta">Get Started Now →</a>
+        <div class="pricing-trust">🔒 Secure payment via Stripe · 256-bit SSL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-center" style="text-align:center;margin-bottom:40px">
+      <div class="section-label">Founder</div>
+      <h2 class="section-title">Built By A Trader.<br>Tested By Contractors.</h2>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-avatar">GP</div>
+      <div>
+        <div class="founder-name">Gil Pesantez</div>
+        <div class="founder-title">Founder · BuildCalc Pro</div>
+        <p class="founder-quote">"I built BuildCalc Pro after watching contractor friends lose jobs because their quotes took 3 days. Now they send pro estimates while still at the job site. Tool that should have existed years ago."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-center" style="text-align:center;margin-bottom:40px">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common Questions.</h2>
+    </div>
+
+    <div class="faq-grid">
+      <details class="faq">
+        <summary>Is there a free trial?</summary>
+        <p>No free trial right now — but if BuildCalc Pro doesn't save you time on your first estimate, just cancel within 7 days and email gptradingclub@gmail.com for a full refund. No questions asked.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How is the AI Market Check different from just Googling prices?</summary>
+        <p>Our AI searches reputable contractor sources (HomeAdvisor, Angi, Fixr, Forbes Home), cross-references them against your specific specs (region, material grade, project size), and gives you a verdict: LOW / ON MARKET / HIGH with % difference. It also flags current market factors like supply chain issues or seasonal pricing.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Can I cancel anytime?</summary>
+        <p>Yes. Cancel from your Stripe customer portal with one click. No contracts, no cancellation fees, no questions. You'll keep access until the end of your current billing period.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What if I work in multiple regions?</summary>
+        <p>Switch regions per estimate. Northeast for jobs in CT, Florida for jobs in FL — labor and material costs auto-adjust based on real regional multipliers (Northeast labor is 1.35x Midwest baseline, for example).</p>
+      </details>
+
+      <details class="faq">
+        <summary>Does it work on mobile?</summary>
+        <p>Yes — works in any modern browser on phone, tablet, or laptop. No app download needed. Generate estimates on-site with your phone.</p>
+      </details>
+
+      <details class="faq">
+        <summary>How accurate are the base prices?</summary>
+        <p>Base prices are calibrated for Midwest USA (national average), then adjusted regionally. The AI Live Market Check verifies against current market data on each estimate. Prices are refreshed monthly. We've calibrated against thousands of real contractor quotes.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Will the price stay $39/mo?</summary>
+        <p>Early adopters get locked-in pricing. If you sign up at $39/mo today, your rate stays $39/mo forever — even when we raise prices for new customers.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>Stop Quoting From Memory.<br>Start Quoting Like A Pro.</h2>
+    <p>Join contractors building professional estimates in under 60 seconds.</p>
+    <a href="https://buy.stripe.com/14A14n0I9ceZb8Q2zacMM03" class="cta-primary">Get Started — $39/mo →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>© 2026 BuildCalc Pro · Built by Gil Pesantez</div>
+    <div class="footer-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#pricing">Pricing</a>
+      <a href="mailto:gptradingclub@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
